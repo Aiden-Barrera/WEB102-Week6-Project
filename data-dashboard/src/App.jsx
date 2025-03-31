@@ -17,7 +17,7 @@ function App() {
 
       const res = await axios.get(url)
       setInfo(res.data)
-      console.log(res.data)
+      console.log(res.data.data.results)
     } catch (err) {
       console.log("Error Fetching Data from Marvel API:", err)
     }
