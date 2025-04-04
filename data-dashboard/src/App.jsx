@@ -29,16 +29,15 @@ function App() {
     <>
       <div style={{display: "flex", justifyContent: 'space-evenly'}}>
         <div className='api-card' style={{margin: 0 }}>
-          <h2>Total # of Classes</h2>
-          <p>{totalClasses}</p>
+          <h1>{totalClasses}</h1>
+          <h2>Total No. of Classes</h2>
         </div>
         <div className='api-card' style={{margin: 0}}>
-          <h2>Total # of Spells</h2>
-          <p style={{fontSize: "18px"}}>{totalSpells}</p>
+          <h1>{totalSpells}</h1>
+          <h2>Total No. of Spells</h2>
         </div>
-        <div className='api-card' style={{margin: 0}}>
-          <h2>Total # of Spells</h2>
-          <p>{totalSpells}</p>
+        <div className='api-card' style={{margin: 0, padding: "0 2%"}}>
+          <img src="/dnd.png" alt="dnd" style={{width: "225px", height: "auto", borderRadius: "16px"}} />
         </div>
       </div>
       <Dashboard info={info} />
