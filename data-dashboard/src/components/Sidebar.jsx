@@ -15,10 +15,10 @@ const Sidebar = () => {
                     padding: '20px',
                     boxSizing: 'border-box'
                 }}>
-                <h2>DnD Dashboard</h2>
+                <h2>🎲 DnD Dashboard</h2>
                 <ul style={{ listStyle: 'none', padding: 0, color: "#ffffff" }}>
-                    <li><Link to="/">Dashboard</Link></li>
-                    <li><Link to="/classes">Classes</Link></li>
+                    <li style={{margin: "25px", fontSize: "24px", fontWeight: "900"}}><Link to="/">Dashboard</Link></li>
+                    <li style={{margin: "25px", fontSize: "24px", fontWeight: "900"}}><Link to="/classes">Classes</Link></li>
                 </ul>
                 </div>
 
@@ -26,7 +26,7 @@ const Sidebar = () => {
                     marginLeft: '250px',
                     padding: '20px',
                     height: '100vh',
-                    overflowY: 'auto',
+                    width: "100%",
                     boxSizing: 'border-box',}}
                 >
                     <Outlet />

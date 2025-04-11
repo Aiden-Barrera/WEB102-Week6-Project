@@ -56,6 +56,7 @@ const Dashboard = ({info}) => {
                     <div>Level</div>
                     <div>Spell #3</div>
                     <div>Level</div>
+                    <div>More Detail</div>
                 </div>
 
                 {/* Section for displaying the information */}

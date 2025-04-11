@@ -27,16 +27,45 @@
   max-height: 90vh; 
 }
 
+.more-info-card {
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  border-radius: 7px;
+  flex-direction: column;
+  padding: 5%;
+  margin: 10px auto;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  text-align: center;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 5px black;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  max-height: 90vh; 
+}
+
+.spell-list {
+  text-align: left; /* ✅ override centering for this section */
+}
+
 .spell-grid {
   display: grid;
-  grid-template-columns: 1.5fr 2fr 1fr 2fr 1fr 2fr 1fr;
+  grid-template-columns: 1.5fr 2fr 1fr 2fr 1fr 2fr 1fr 1fr;
   gap: 10px;
   margin-top: 10px;
   align-items: center;
+  text-align: left;
 }
 
 .spell-grid.header {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 2fr 1fr 2fr 1fr 1fr;
   font-weight: bold;
   border-bottom: 2px solid white;
   padding-bottom: 8px;
 }
+

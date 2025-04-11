@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from "react-router-dom";
 import axios from "axios"
 import './../App.css'
 const ClassCard = ({item, level}) => {
+    const navigate = useNavigate()
     const [spellsbyClass, setSpellsByClass] = useState(null)
 
     const fetchSpells = async () => {
@@ -24,16 +26,24 @@ const ClassCard = ({item, level}) => {
         fetchSpells()
     }, [item, level])
 
+    const handleClick = () => {
+        navigate("/viewMore", {
+            state: {
+                classItem: item,
+                spells: spellsbyClass
+            }
+        })
+    }
 
     return (
         <>
            <div className="spell-grid">
                 <div>{item?.name}</div>
                 {spellsbyClass?.length !== 0 ? spellsbyClass?.slice(0, 3)?.map((spell, index) => (
-                    <>
-                    <div key={`name-${index}`}>{spell?.name ?? "N/A"}</div>
-                    <div key={`level-${index}`}>{spell?.level ?? "N/A"}</div>
-                    </>
+                    <React.Fragment key={index}>
+                        <div>{spell?.name ?? "N/A"}</div>
+                        <div>{spell?.level ?? "N/A"}</div>
+                    </React.Fragment>
                 )) : (
                     <>
                     <div>N/A</div>
@@ -44,8 +54,10 @@ const ClassCard = ({item, level}) => {
                     <div>N/A</div>
                     </>
                 )}
+                {spellsbyClass?.length !== 0 && (
+                    <button style={{ padding: "4px 10px" }} onClick={handleClick}>▶️</button>
+                )}
             </div>
-
         </>
     )
 }
