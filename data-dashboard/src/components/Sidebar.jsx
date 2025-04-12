@@ -18,7 +18,6 @@ const Sidebar = () => {
                 <h2>🎲 DnD Dashboard</h2>
                 <ul style={{ listStyle: 'none', padding: 0, color: "#ffffff" }}>
                     <li style={{margin: "25px", fontSize: "24px", fontWeight: "900"}}><Link to="/">Dashboard</Link></li>
-                    <li style={{margin: "25px", fontSize: "24px", fontWeight: "900"}}><Link to="/classes">Classes</Link></li>
                 </ul>
                 </div>
 

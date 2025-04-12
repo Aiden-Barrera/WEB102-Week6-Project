@@ -27,7 +27,7 @@ const ClassCard = ({item, level}) => {
     }, [item, level])
 
     const handleClick = () => {
-        navigate("/viewMore", {
+        navigate(`/viewMore/${item?.name}`, {
             state: {
                 classItem: item,
                 spells: spellsbyClass
