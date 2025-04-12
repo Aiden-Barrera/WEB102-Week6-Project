@@ -37,6 +37,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+
 ![Kapture 2025-04-12 at 01 19 19](https://github.com/user-attachments/assets/ae1ec313-dd25-4f46-b5dc-d54560088c0e)
 
 
